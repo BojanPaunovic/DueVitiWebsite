@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Due Viti</title>    
+</head>
+<body>
+    <div class="navigacija">
+        <a href="pocetna.html"><img id="duevitilogo" src="./img/DUE-VITI-LOGO-BLACK@3x.png"></a>
+
+        <ul>
+            <li><a href="pocetna.html">Početna</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="partneri.html">Partneri</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <button class="hamburger is-active">
+            <div class="bar"></div>
+        </button>
+
+        <nav class="mobile-nav">
+            <a href="pocetna.html">Početna</a>
+            <a href="onama.html">O nama</a>
+            <a href="partneri.html">Partneri</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </div>
+
+
+    <br><br><br><br>
+    <div class="kontakt-div1">
+        <span>Kontaktirajte nas!</span> <br><br>
+        <p>Ukoliko imate bilo kakvo pitanje, možete nas kontaktirati putem forme ispod,<br>
+        putem mejla ili pozivom na navedeni broj telefona.
+        </p>
+    </div> 
+
+    <br><br><br><br>
+
+<div class="kontakt">
+    <div class="kontaktForma hidden">
+            <form>
+                <label for="ime">Vaše ime:</label> <br> 
+                <input type="text" id="ime" name="ime" required  
+                oninvalid="this.setCustomValidity('Unesite Vaše ime')"
+                oninput="setCustomValidity('')"/> <br>
+
+
+                <label for="prezime">Vaše prezime:</label>  <br>
+                <input type="text" id="prezime" name="prezime" required
+                oninvalid="this.setCustomValidity('Unesite Vaše prezime')"
+                oninput="setCustomValidity('')"/> <br>
+
+                <label for="e-mail">Vaš e-mail:</label>  <br>
+                <input type="email" id="email" name="email" required
+                oninvalid="this.setCustomValidity('Neispravna email adresa')"
+                oninput="setCustomValidity('')"/> <br>
+
+                <label for="upit">Vaš upit:</label> <br>
+                <textarea id="upit" name="upit" style="height:200px;" required
+                oninvalid="this.setCustomValidity('Unesite Vaš upit')"
+                oninput="setCustomValidity('')"></textarea> <br>
+                <input type="submit" id="submit" value="Pošalji">
+            </form>  
+    </div>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <div class="kontaktPodaci hidden">
+        <img src="./img/dueviti-logo.png" alt="">
+        <br>
+        <p><span>Adresa:</span> Bajči Žilinskog 8</p> <br>
+        <p><span>Telefon:</span> 021/38-28-852</p> <br>
+        <p><span>E-mail:</span> info@dueviti.com</p>
+    </div>
+</div>
+
+    <br><br><br>
+
+    <div class="footer">
+        <br><br>
+        <span>
+        Due Viti Doo © 2023
+        </span>
+        <br><br>
+        <span>
+        Sva prava zadržana.
+        </span>
+    </div>
+    
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("w6uYgaJXloGQiACnE");
+    })();
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
