@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: orchid;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+html, body {
+  margin: 0;
+}
+
+@media screen and (max-width: 1240px) {
+  .navigacija ul li {
+    display: none;
+  }
+  #duevitilogo {
+    padding-left: 100px;
+  }
+}
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  float: right;
+  order: -1;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  margin: 8px 4px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-13px, 12px);
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-13px, -11px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 98;
+  background-color: darkorchid;
+  margin-top: 100px;
+  padding-top: 20px;
+}
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  max-width: 200px;
+  text-decoration: none;
+  color: #fff;
+  background-color: darkorchid;
+}
+.mobile-nav a:hover {
+  background-color: #BA55D3;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1240px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigacija {
+    max-width: 100%;
+  }
+  .first-div, .second-div {
+    max-width: 100%;
+  }
+  .second-div img {
+    max-width: 100%;
+  }
+  .third-div {
+    flex-direction: column;
+    width: 100%;
+    max-width: 70%;
+  }
+  .footer {
+    width: 1600px;
+  }
+}
+.navigacija {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .navigacija {
+    width: 100%;
+  }
+}
+.navigacija .hamburger {
+  width: 70px;
+  height: 80px;
+  padding-top: 20px;
+  color: #6b238f;
+}
+@media screen and (max-width: 768px) {
+  .navigacija .hamburger {
+    position: fixed;
+  }
+}
+.navigacija #duevitilogo {
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  order: 0;
+}
+.navigacija ul {
+  background-color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  order: 1;
+  text-align: center;
+  justify-content: center;
+  padding-left: 200px;
+  padding-top: 20px;
+  display: flex;
+  list-style: none;
+  letter-spacing: 1.5px;
+  font-size: 23px;
+}
+.navigacija ul a {
+  background-color: #fff;
+  text-decoration: none;
+}
+.navigacija ul li {
+  background-color: #fff;
+  padding: 10px;
+}
+.navigacija ul a:hover {
+  text-decoration-line: underline;
+  transition: all 3s ease;
+}
+
+.first-div {
+  padding-top: 2em;
+  text-align: center;
+}
+.first-div img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+.first-div p {
+  width: auto;
+  font-size: 25px;
+  color: #6b238f;
+  background-color: orchid;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.first-div p span {
+  background-color: #fff;
+  font-size: 25px;
+  color: darkorchid;
+}
+.first-div span {
+  font-size: 20px;
+  color: #6b238f;
+  line-height: 23px;
+}
+
+.second-div {
+  text-align: center;
+}
+.second-div p {
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.second-div p span {
+  background-color: #fff;
+  font-size: 25px;
+  color: darkorchid;
+}
+.second-div span {
+  font-size: 20px;
+  color: #6b238f;
+  line-height: 23px;
+}
+.second-div .vineyard-pics1 {
+  display: block;
+}
+.second-div .vineyard-pics1 img {
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+}
+.second-div .vineyard-pics2 {
+  display: block;
+}
+.second-div .vineyard-pics2 img {
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.third-div {
+  display: flex;
+  padding-left: 10%;
+  padding-right: 5%;
+}
+.third-div .pocetna-vcr {
+  order: 0;
+  width: 450px;
+  text-align: center;
+}
+.third-div .pocetna-vcr h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.third-div .pocetna-vcr h1 .naslov1 {
+  background-color: #fff;
+  color: orchid;
+  border-radius: 5px;
+}
+.third-div .pocetna-vcr h1 span {
+  color: red;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.third-div .pocetna-vcr p {
+  font-size: 20px;
+  color: #6b238f;
+}
+.third-div .pocetna-vcr-img {
+  order: 1;
+}
+.third-div .pocetna-vcr-img img {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .third-div {
+    padding-left: 5%;
+  }
+  .footer {
+    max-width: 100%;
+  }
+}
+.kontakt-pocetna {
+  text-align: center;
+}
+.kontakt-pocetna h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.kontakt-pocetna h1 span {
+  background-color: #fff;
+  color: orchid;
+  border-radius: 5px;
+}
+.kontakt-pocetna p {
+  font-size: 20px;
+  color: #6b238f;
+}
+.kontakt-pocetna #kontaktDugme {
+  color: #6b238f;
+  font-size: 25px;
+  border: 1px solid darkorchid;
+  border-radius: 10px;
+  padding: 5px;
+}
+.kontakt-pocetna #kontaktDugme a {
+  color: #6b238f;
+  text-decoration: none;
+}
+
+.footer {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  height: 100px;
+  width: 100%;
+  min-width: 320px;
+  background-color: #BA55D3;
+  color: white;
+  text-align: center;
+}
+.footer span {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .onama-div1 .onama-div1-sub1 {
+    order: 1;
+  }
+  .onama-div1 img {
+    order: 0;
+  }
+  .onama-div2 {
+    margin-left: 5%;
+  }
+}
+.onama-div1 {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.onama-div1 .onama-div1-sub1 {
+  order: 0;
+  width: 50%;
+}
+.onama-div1 .onama-div1-sub1 span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  background-color: white;
+  color: #6b238f;
+  border-radius: 10px;
+  padding: 3px;
+}
+.onama-div1 .onama-div1-sub1 p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.onama-div1 img {
+  border-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 700px;
+  height: 630px;
+  order: 1;
+}
+
+.onama-div2 {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+.onama-div2 .onama-div2-sub1 p {
+  width: 700px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 5px;
+}
+.onama-div2 span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  background-color: white;
+  color: #6b238f;
+  border-radius: 10px;
+  padding: 3px;
+}
+.onama-div2 p {
+  font-size: 20px;
+}
+.onama-div2 img {
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.onama-div3 {
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+.onama-div3 span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: azure;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px;
+  color: orchid;
+  font-size: 25px;
+}
+.onama-div3 img {
+  height: 200px;
+}
+
+.kontakt-div1 {
+  text-align: center;
+}
+.kontakt-div1 span {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: white;
+  color: orchid;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.kontakt-div1 p {
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.kontakt {
+  display: flex;
+  padding-left: 80px;
+}
+@media screen and (max-width: 1120px) {
+  .kontakt {
+    flex-direction: column;
+    padding-left: 200px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .kontakt {
+    padding-left: 10px;
+  }
+}
+.kontakt .kontaktForma {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  background-color: #BA55D3;
+  width: 50%;
+  font-size: 20px;
+  text-align: left;
+  border: 1px solid white;
+}
+@media screen and (max-width: 1120px) {
+  .kontakt .kontaktForma {
+    width: 85%;
+  }
+}
+.kontakt .kontaktForma form {
+  background-color: #BA55D3;
+}
+.kontakt .kontaktForma label {
+  background: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.kontakt .kontaktForma input {
+  background-color: white;
+  height: 26px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  width: 260px;
+}
+.kontakt .kontaktForma textarea {
+  height: 150px;
+  font-size: 18px;
+  width: 400px;
+  resize: none;
+}
+.kontakt .kontaktForma input[type=submit] {
+  height: 50px;
+  width: 100px;
+  border: none;
+}
+.kontakt .kontaktForma input[type=submit]:hover {
+  background-color: #6b238f;
+  color: #fff;
+}
+.kontakt .kontaktPodaci img {
+  width: 500px;
+  height: 300px;
+}
+.kontakt .kontaktPodaci p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-left: 130px;
+}
+.kontakt .kontaktPodaci p span {
+  font-weight: bold;
+}
+
+.partneri-div1 {
+  text-align: center;
+}
+.partneri-div1 span {
+  background-color: white;
+  color: #BA55D3;
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.partneri-vcr {
+  text-align: center;
+}
+.partneri-vcr #s1 {
+  font-size: 24px;
+  padding: 3px;
+  background-color: #6b238f;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.partneri-vcr #s2 {
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.partneri-vcr p {
+  padding: 5px;
+  border-radius: 3px;
+  width: 50%;
+  background-color: gray;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.partneri-vcr #vcr1 {
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.partneri-vcr #vcr2 {
+  width: 60%;
+}
+.partneri-vcr p, .partneri-vcr img {
+  display: inline-block;
+}
+
+.partneri-ostali {
+  text-align: center;
+}
+.partneri-ostali #s1 {
+  font-size: 24px;
+  padding: 3px;
+  background-color: #6b238f;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.partneri-ostali .ostalipartneri {
+  width: 40%;
+  display: flex;
+  margin: auto;
+}
+@media screen and (max-width: 1260px) {
+  .partneri-ostali .ostalipartneri {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 965px) {
+  .partneri-ostali .ostalipartneri {
+    margin-left: 5%;
+  }
+}
+.partneri-ostali .profilAlsace span {
+  background-color: green;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,714 @@
+*{
+    box-sizing: border-box;
+	margin: 0;
+    background-color:orchid;
+}
+html{
+    overflow-y: scroll;
+}
+body{
+    scroll-behavior: smooth;
+    max-width:100%;
+}
+
+html,body{
+    margin:0;
+}
+
+
+/////HAMBURGER MENI
+@media screen and (max-width:1240px) {
+    .navigacija ul li{
+        display:none;
+    }
+
+    #duevitilogo{
+        padding-left:100px;
+    }
+}
+
+.hamburger {
+    position:relative;
+    display:block;
+    width:35px;
+    cursor:pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border:none;
+
+    float:right;
+    order:-1;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+    content:'';
+    display:block;
+    width:100%;
+    height:10px;
+    background-color: black;
+    margin: 8px 4px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-13px, 12px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-13px, -11px);
+    
+}
+
+.hamburger.is-active .bar{
+    opacity:0;
+}
+
+
+.mobile-nav{
+    position:fixed;
+    top:0;
+    left:100%;
+    width:100%;
+    height:100%;
+    display:block;
+    z-index: 98;
+    background-color: darkorchid;
+    margin-top:100px;
+    padding-top:20px;
+
+    a{
+        display:block;
+        width:100%;
+        text-align:center;
+        margin: 0 auto 16px;
+        padding:12px 16px;
+        max-width:200px;
+
+        text-decoration:none;
+        color:#fff;
+        background-color:darkorchid;
+    }
+
+    a:hover{
+        background-color:#BA55D3;
+    }
+}
+
+.mobile-nav.is-active {
+    left:0;
+    transition:0.5s;
+}
+
+
+@media screen and (min-width:1240px) {
+    .hamburger{
+        display:none;
+    }
+}
+
+
+
+///////////////////////////////////////////
+/////---------POCETNA.HTML-----------/////
+/////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+@media screen and (max-width:768px) {
+    .navigacija{
+        max-width:100%;
+    }
+    
+    .first-div, .second-div{
+        max-width:100%;
+    }
+
+    .second-div img{
+        max-width:100%;
+    }
+
+    .third-div{
+        flex-direction:column;
+        width:100%;
+        max-width:70%;
+    }
+
+    .footer{
+        width:1600px;
+    }
+
+}
+
+
+.navigacija{
+    display:flex;
+    flex-direction: row;
+    background: #fff;
+    height:100px;
+
+    @media screen and (max-width:768px) {
+        width:100%;
+    }
+
+    .hamburger{
+        width:70px;
+        height:80px;
+        padding-top:20px;
+        color:#6b238f;
+
+        @media screen and (max-width:768px){
+            position:fixed;
+        }
+
+    }
+    
+    #duevitilogo{
+        background-color: #fff;
+        height: 100px;
+        display:flex;
+        order:0;
+
+}
+
+    ul{
+        background-color: #fff;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight:bold;
+        order:1;
+        text-align:center;
+        justify-content: center;
+        padding-left:200px;
+        padding-top:20px;
+        display:flex;
+        list-style: none;
+        letter-spacing: 1.5px;
+
+        font-size:23px;
+
+        a{
+            background-color: #fff;
+            text-decoration: none;
+        }
+        li{
+            background-color: #fff;
+            padding:10px;
+        }
+        a:hover{
+            text-decoration-line:underline;
+            transition:all 3s ease;
+        }
+    }
+}
+
+
+.first-div{
+    padding-top: 2em;
+    text-align:center;
+
+    img{
+        width:80%;
+        height:auto;
+        border-radius:10px;
+    }
+    p{
+        width:auto;
+        font-size:25px;
+        color:#6b238f;
+        background-color:orchid;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        span{
+            background-color: #fff;
+            font-size:25px;
+            color:darkorchid;
+        }
+        
+    }
+
+    span{
+        font-size:20px;
+        color:#6b238f;
+        line-height: 23px;
+    }
+}
+
+
+
+.second-div{
+    text-align:center;
+
+    p{
+        color:#fff;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        span{
+            background-color: #fff;
+            font-size:25px;
+            color:darkorchid;
+        }
+    }
+    span{
+        font-size:20px;
+        color:#6b238f;
+        line-height: 23px;
+    }
+
+    .vineyard-pics1{
+        display:block;
+        
+        img{
+            border-radius:10px;
+            width:700px;
+            height:500px;
+        }
+    }
+    .vineyard-pics2{
+        display:block;
+        
+        img{
+            border-radius:10px;
+            width:700px;
+            height:500px;
+        }
+    }
+}
+
+.hidden{
+    opacity:0;
+    filter:blur(5px);
+    transform:translateX(-100%);
+    transition:all 2s ease;
+}
+
+.show{
+    opacity:1;
+    filter:blur(0);
+    transform:translateX(0);
+}
+
+
+.third-div{
+    display:flex;
+    padding-left:10%;
+    padding-right:5%;
+
+    .pocetna-vcr{
+        order:0;
+        width:450px;
+        text-align:center;
+
+        h1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            .naslov1{
+                background-color: #fff;
+                color:orchid;
+                border-radius:5px;
+            }
+
+            span{
+                color:red;
+                background-color: #fff;
+                border-radius:5px;
+            }
+        }
+
+        p{
+            font-size:20px;
+            color:#6b238f;
+        }
+    }
+    .pocetna-vcr-img{
+        order:1;
+
+        img{
+            width:500px;
+            height:500px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .third-div{
+        padding-left:5%;
+    }
+
+    .footer{
+        max-width:100%;
+    }
+}
+
+.kontakt-pocetna{
+    text-align:center;
+
+    h1{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+        span{
+            background-color: #fff;
+            color:orchid;
+            border-radius:5px;
+        }
+    }
+
+    p{
+        font-size:20px;
+        color:#6b238f;
+    }
+
+    #kontaktDugme{
+        color:#6b238f;
+        font-size:25px;
+        border:1px solid darkorchid;
+        border-radius: 10px;
+        padding:5px;
+
+        a{
+            color:#6b238f;
+            text-decoration:none;
+        }
+    }
+}
+
+
+.footer{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:15px;
+    height:100px;
+    width: 100%;
+    min-width:320px;
+    background-color: #BA55D3;
+    color: white;
+    text-align: center;
+
+    span{
+        padding:5px;
+        border-radius:5px;
+    }
+}
+///////////////////////////////////
+
+
+
+////////////////////////////////////
+////////-----ONAMA.HTML////////////
+//////////////////////////////////
+
+@media screen and (max-width:1200px) {
+    .onama-div1{
+        
+        .onama-div1-sub1 {
+            order:1;
+        }
+        img{
+            order:0;
+        }
+    }
+
+    .onama-div2{
+        margin-left:5%;
+    }
+}
+
+
+.onama-div1{
+    text-align:center;
+    width:90%;
+    margin:auto;
+    display:flex;
+
+.onama-div1-sub1{
+    order:0;
+    width:50%;
+
+    span{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:40px;
+        background-color: white;
+        color:#6b238f;
+        border-radius:10px;
+        padding:3px;
+    }
+    p{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:18px;
+        background-color: antiquewhite;
+        border-radius:5px;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+}
+
+    img{
+        border-radius:10px;
+        border-top-left-radius: 10px;
+        
+        width:700px;
+        height:630px;
+        order:1;
+    }
+}
+
+.onama-div2{
+    width:70%;
+    text-align:center;
+    margin:auto;
+    display:flex;
+
+    .onama-div2-sub1{
+        p{
+            width:700px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size:18px;
+            background-color:antiquewhite;
+            border-radius:10px;
+            padding:5px;
+        }
+    }
+
+    span{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:30px;
+        background-color: white;
+        color:#6b238f;
+        border-radius:10px;
+        padding:3px;
+    }
+
+    p{
+        font-size:20px;
+    }
+
+    img{
+        border:1px solid black;
+        width:300px;
+        height:300px;
+        border-radius:15px;
+    }
+}
+
+.onama-div3{
+    height:200px;
+    position:relative;
+    text-align:center;
+    
+    span{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color:azure;
+        font-weight:bold;
+        border-radius:10px;
+        padding:5px;
+        color:orchid;
+        font-size:25px;
+    }
+
+    img{
+        height:200px;
+    }
+}
+
+
+
+//////////////////////////////////////
+////////----KONTAKT.HTML----/////////
+////////////////////////////////////
+
+.kontakt-div1{
+    text-align:center;
+    
+    span{
+        padding:5px;
+        border-radius:10px;
+
+        font-size:24px;
+        background-color:white;
+        color:orchid;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    p{
+        font-size:18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
+
+.kontakt{
+    display:flex;
+    padding-left:80px;
+
+    @media screen and (max-width:1120px) {
+        flex-direction:column;
+        padding-left:200px; 
+    }
+
+    @media screen and (max-width:850px) {
+        padding-left:10px;
+    }   
+
+.kontaktForma{
+    position:relative;
+    display:flex;
+    padding:20px;
+    background-color: #BA55D3;
+    width:50%;
+    font-size:20px;
+    text-align:left;
+    border:1px solid white;
+
+    @media screen and (max-width:1120px) {
+        width:85%;
+    }
+
+
+    form{
+        background-color: #BA55D3;
+    }
+
+    label{
+        background:none;
+        padding:10px;
+        border-radius:5px;
+        color:black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    }
+    input{
+        background-color: white;
+        height:26px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:20px;
+        width:260px;
+    }
+    textarea{
+        height:150px;
+        font-size:18px;
+        width:400px;
+        resize:none;
+    }
+    input[type=submit]{
+        height:50px;
+        width:100px;
+        border:none;
+    }
+    input[type=submit]:hover{
+        background-color: #6b238f;
+        color:#fff;
+    }
+}
+
+.kontaktPodaci{
+    img{
+        width:500px;
+        height:300px;
+    }
+
+    p{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-left:130px;
+        
+        span{
+            font-weight: bold;
+        }
+    }
+}
+}
+
+
+
+
+////////////////////////////////////////////
+//////////////PARTNERI.HTML////////////////
+//////////////////////////////////////////
+
+.partneri-div1{
+    text-align: center;
+
+    span{
+        background-color: white;
+        color:#BA55D3;
+        font-size:40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding:5px;
+        border-radius:10px;
+    }
+}
+
+.partneri-vcr{
+    text-align:center;
+
+    #s1{
+        font-size:24px;
+        padding:3px;
+        background-color:#6b238f;
+        color:#fff;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #s2{
+        background-color:red;
+        color:#fff;
+        font-size:20px;
+        padding:5px;
+        border-radius:10px;
+    }
+
+    p{
+        padding:5px;
+        border-radius:3px;
+        width:50%;
+        background-color: gray;
+        color:#fff;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #vcr1{
+        width:30%;
+        border-radius:5px;
+        border:1px solid black;
+    }
+
+    #vcr2{
+        width:60%;
+    }
+
+    p, img{
+        display:inline-block;
+    }
+}
+
+
+.partneri-ostali{
+    text-align: center;
+
+    #s1{
+        font-size:24px;
+        padding:3px;
+        background-color:#6b238f;
+        color:#fff;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .ostalipartneri{
+        width:40%;
+        display:flex;
+        margin:auto;
+
+        @media screen and (max-width:1260px) {
+            margin-left:20%;
+        }
+
+        @media screen and (max-width:965px) {
+            margin-left:5%;
+        }
+    }
+
+    .profilAlsace{
+        span{
+            background-color: green;
+            color:white;
+        }
+    }
+}
+
+
+
